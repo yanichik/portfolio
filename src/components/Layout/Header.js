@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import logo from "../../assets/logo.svg";
 import resume from "../../assets/resume.pdf";
@@ -7,6 +7,9 @@ import styles from "./Header.module.css";
 export default function Header() {
 	const [isNavVisible, setIsNavVisible] = useState(true);
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
+	const [navShadowVisible, setNavShadowVisible] = useState(false);
+
+	const navRef = useRef();
 
 	const handleMediaQueryChange = (mediaQuery) => {
 		if (mediaQuery.matches) {
@@ -23,12 +26,32 @@ export default function Header() {
 		return () => {
 			mediaQuery.removeEventListener("change", handleMediaQueryChange);
 		};
-	});
+	}, []);
+
+	const changeNav = () => {
+		if (window.scrollY > 50) {
+			// console.log("scrolled 50");
+			setNavShadowVisible(true);
+		} else {
+			// console.log("back to 0");
+			setNavShadowVisible(false);
+		}
+	};
+
+	const scroll = window.addEventListener("scroll", changeNav);
+
 	const toggleNav = () => {
 		setIsNavVisible(!isNavVisible);
 	};
 	return (
-		<header className={styles.Header}>
+		<header
+			className={
+				navShadowVisible
+					? `${styles.Header} ${styles.Header_scrolled}`
+					: styles.Header
+			}
+			ref={navRef}
+		>
 			<img src={logo} className={styles.Logo} alt="Logo" />
 			{(isNavVisible || !isSmallScreen) && (
 				<nav className={styles.Nav}>

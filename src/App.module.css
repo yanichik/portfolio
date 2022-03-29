@@ -1,12 +1,20 @@
 .content {
 	display: flex;
 	flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 	margin: 10rem auto;
 	width: 50%;
-  text-align: justify;
-  /* word-break:keep-all; */
-  text-justify: distribute;
+	text-align: justify;
+	/* color: #c7a003; */
+	/* color: #3d4e17; */
+	color: #151f1e;
+	/* word-break:keep-all; */
+	text-justify: distribute;
 	/* max-width: 40rem; */
+}
+
+.anchor {
+	position: absolute;
+	transform: translateY(-50vh);
 }

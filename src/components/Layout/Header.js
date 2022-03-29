@@ -41,6 +41,14 @@ export default function Header() {
 	const toggleNav = () => {
 		setIsNavVisible(!isNavVisible);
 	};
+
+	const scrollWithOffset = (el) => {
+		const vh = window.innerHeight;
+		const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+		const yOffset = (vh / 2) * -1;
+		window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+	};
+
 	return (
 		<header
 			className={
@@ -52,17 +60,21 @@ export default function Header() {
 			<img src={logo} className={styles.Logo} alt="Logo" />
 			{(isNavVisible || !isSmallScreen) && (
 				<nav className={styles.Nav}>
-					<Link to="#about">
-						<span className={styles.Nav_number}>01. </span><span className={styles.Nav_link}>A</span>bout
+					<Link smooth to="#about" scroll={(el) => scrollWithOffset(el)}>
+						<span className={styles.Nav_number}>01. </span>
+						<span className={styles.Nav_link}>A</span>bout
 					</Link>
-					<Link to="#projects">
-					<span className={styles.Nav_number}>02. </span><span className={styles.Nav_link}>P</span>rojects
+					<Link smooth to="#projects" scroll={(el) => scrollWithOffset(el)}>
+						<span className={styles.Nav_number}>02. </span>
+						<span className={styles.Nav_link}>P</span>rojects
 					</Link>
-					<Link to="#skills">
-					<span className={styles.Nav_number}>03. </span><span className={styles.Nav_link}>S</span>kills
+					<Link smooth to="#skills" scroll={(el) => scrollWithOffset(el)}>
+						<span className={styles.Nav_number}>03. </span>
+						<span className={styles.Nav_link}>S</span>kills
 					</Link>
-					<Link to="#contact">
-					<span className={styles.Nav_number}>04. </span><span className={styles.Nav_link}>C</span>ontact
+					<Link smooth to="#contact" scroll={(el) => scrollWithOffset(el)}>
+						<span className={styles.Nav_number}>04. </span>
+						<span className={styles.Nav_link}>C</span>ontact
 					</Link>
 					<a
 						className={styles.resume_button}

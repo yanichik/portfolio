@@ -13,11 +13,11 @@ function App() {
 			<div className={styles.layout}>
 				<Header />
 				<section className={styles.content}>
-					<Intro id="intro" />
-					<About id="about" />
-					<Projects id="projects" />
-					<Skills id="skills" />
-					<Contact id="contact" />
+					<Intro classes="anchor" id="intro" />
+					<About classes="anchor" id="about" />
+					<Projects classes="anchor" id="projects" />
+					<Skills classes="anchor" id="skills" />
+					<Contact classes="anchor" id="contact" />
 				</section>
 			</div>
 		</Fragment>

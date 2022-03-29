@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import logo from "../../assets/logo.svg";
 import resume from "../../assets/resume.pdf";
@@ -8,8 +8,6 @@ export default function Header() {
 	const [isNavVisible, setIsNavVisible] = useState(true);
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
 	const [navShadowVisible, setNavShadowVisible] = useState(false);
-
-	const navRef = useRef();
 
 	const handleMediaQueryChange = (mediaQuery) => {
 		if (mediaQuery.matches) {
@@ -38,7 +36,7 @@ export default function Header() {
 		}
 	};
 
-	const scroll = window.addEventListener("scroll", changeNav);
+	window.addEventListener("scroll", changeNav);
 
 	const toggleNav = () => {
 		setIsNavVisible(!isNavVisible);
@@ -50,24 +48,30 @@ export default function Header() {
 					? `${styles.Header} ${styles.Header_scrolled}`
 					: styles.Header
 			}
-			ref={navRef}
 		>
 			<img src={logo} className={styles.Logo} alt="Logo" />
 			{(isNavVisible || !isSmallScreen) && (
 				<nav className={styles.Nav}>
-					<Link to="#about">1. About</Link>
-					<Link to="#projects">2. Projects</Link>
-					<Link to="#skills">3. Skills</Link>
-					<Link to="#contact">4. Contact</Link>
+					<Link to="#about">
+						<span className={styles.Nav_number}>01. </span><span className={styles.Nav_link}>A</span>bout
+					</Link>
+					<Link to="#projects">
+					<span className={styles.Nav_number}>02. </span><span className={styles.Nav_link}>P</span>rojects
+					</Link>
+					<Link to="#skills">
+					<span className={styles.Nav_number}>03. </span><span className={styles.Nav_link}>S</span>kills
+					</Link>
+					<Link to="#contact">
+					<span className={styles.Nav_number}>04. </span><span className={styles.Nav_link}>C</span>ontact
+					</Link>
 					<a
 						className={styles.resume_button}
 						href={resume}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Resume
+						<span className={styles.Nav_link}>R</span>esume
 					</a>
-					{/* <button>Logout</button> */}
 				</nav>
 			)}
 			<button onClick={toggleNav} className={styles.Burger}>

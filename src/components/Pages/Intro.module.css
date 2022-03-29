@@ -1,0 +1,30 @@
+.intro_name {
+	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+	font-size: 0.8rem;
+	/* font-weight: bold; */
+}
+
+.intro_name_job {
+	font-family: Calibre, Inter, "San Francisco", "SF Pro Text";
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.intro_parag {
+	font-family: Calibre, Inter, "San Francisco", "SF Pro Text";
+	font-size: 1rem;
+	/* font-weight: bold; */
+}
+
+.github {
+	margin-top: 3%;
+	border: solid 1px black;
+	padding: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	color: inherit;
+}
+
+p {
+	font-size: 50%;
+}

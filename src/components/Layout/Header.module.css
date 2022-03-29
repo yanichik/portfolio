@@ -1,8 +1,8 @@
 .Header {
 	position: fixed;
 	top: 0;
-	/* max-height: 70px; */
-	line-height: 40px;
+	max-height: 50px;
+	/* line-height: 40px; */
 	width: 100vw;
 	display: grid;
 	grid-template-areas: "logo nav";
@@ -11,39 +11,57 @@
 	background-color: #ffffff;
 	/* background-color: #282c34; */
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  /* margin-bottom: 50px; */
+	/* margin-bottom: 50px; */
 }
-.Header_scrolled{
-  box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2);
+.Header_scrolled {
+	box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .Logo {
 	grid-area: "logo";
-	height: 70px;
+	height: 40px;
 }
 .Nav {
+	display: inline;
 	grid-area: nav;
 	display: grid;
 	grid-template-columns: repeat(5, auto);
 	align-items: center;
 	/* justify-content: space-evenly; */
-	justify-content:right;
+	justify-content: right;
+	font-size: 10px;
+	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+	/* font-family: Georgia, "Times New Roman", Times, serif; */
+	text-transform: uppercase;
 }
 .Nav a {
+	/* display: inline; */
 	color: #000000;
-  /* font-family: 'Courier New', Courier, monospace; */
-  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 14px;
+	/* font-family: 'Courier New', Courier, monospace; */
+	/* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+	/* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+	/* font-size: 12px; */
 	font-weight: 500;
 	transition: 0.3s;
 	text-decoration: none;
-  margin-right: 35px;
+	margin-right: 35px;
+	padding: 7px 10px;
 }
-.resume_button{
-  margin: 0;
-  outline: orange;
-  border: orange;
-  font-size: 50px;
+.Nav_link {
+	/* display: inline; */
+	font-size: 120%;
+	/* font-weight: bold; */
+}
+
+.Nav_number{
+	color: orange;
+}
+
+.resume_button {
+	margin: 0;
+	outline: orange solid 1px;
+	/* border: orange solid 1px; */
+	border-radius: 10px;
 }
 .Nav a:hover {
 	transform: scale(1.1);

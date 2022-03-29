@@ -1,3 +1,10 @@
-.email{
-margin-top: 550px;
+.email {
+	display: inherit;
+	flex-direction: column;
+	text-align: justify;
+	margin-top: 25%;
+	position: relative;
+}
+.email a {
+	text-align: center;
 }

@@ -1,3 +1,12 @@
 .content {
 	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	margin: 10rem auto;
+	width: 50%;
+  text-align: justify;
+  /* word-break:keep-all; */
+  text-justify: distribute;
+	/* max-width: 40rem; */
 }

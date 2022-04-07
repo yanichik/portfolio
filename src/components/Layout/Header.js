@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import logo from "../../assets/logo.svg";
 import resume from "../../assets/resume.pdf";
-import styles from "./Header.module.css";
+// import styles from "./Header.module.css";
 
-export default function Header() {
-	const [isNavVisible, setIsNavVisible] = useState(true);
+export default function Header(props) {
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
 	const [navShadowVisible, setNavShadowVisible] = useState(false);
 
@@ -38,57 +37,51 @@ export default function Header() {
 
 	window.addEventListener("scroll", changeNav);
 
-	const toggleNav = () => {
-		setIsNavVisible(!isNavVisible);
-	};
-
 	const scrollWithOffset = (el) => {
 		const vh = window.innerHeight;
 		const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-		const yOffset = (vh / 2) * -1;
+		const yOffset = (vh / 5) * -1;
 		window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
 	};
 
+	// let headerClasses =
+	// 	"Header" + navShadowVisible
+	// 		? "Header_scrolled"
+	// 		: "" + props.animateHeader
+	// 		? "animate__lightSpeedInLeft"
+	// 		: "";
+
 	return (
-		<header
-			className={
-				navShadowVisible
-					? `${styles.Header} ${styles.Header_scrolled}`
-					: styles.Header
-			}
-		>
-			<img src={logo} className={styles.Logo} alt="Logo" />
-			{(isNavVisible || !isSmallScreen) && (
-				<nav className={styles.Nav}>
+		<header className={navShadowVisible ? "Header Header_scrolled" : "Header"}>
+			<img src={logo} className="header_logo animate__animated animate__lightSpeedInLeft" alt="Header Logo" />
+			{!isSmallScreen && (
+				<nav className="Nav animate__animated animate__lightSpeedInLeft">
 					<Link smooth to="#about" scroll={(el) => scrollWithOffset(el)}>
-						<span className={styles.Nav_number}>01. </span>
-						<span className={styles.Nav_link}>A</span>bout
+						<span className="Nav_number">01.&ensp;</span>
+						<span className="Nav_link">A</span>bout
 					</Link>
 					<Link smooth to="#projects" scroll={(el) => scrollWithOffset(el)}>
-						<span className={styles.Nav_number}>02. </span>
-						<span className={styles.Nav_link}>P</span>rojects
+						<span className="Nav_number">02.&ensp;</span>
+						<span className="Nav_link">P</span>rojects
 					</Link>
 					<Link smooth to="#skills" scroll={(el) => scrollWithOffset(el)}>
-						<span className={styles.Nav_number}>03. </span>
-						<span className={styles.Nav_link}>S</span>kills
+						<span className="Nav_number">03.&ensp;</span>
+						<span className="Nav_link">S</span>kills
 					</Link>
 					<Link smooth to="#contact" scroll={(el) => scrollWithOffset(el)}>
-						<span className={styles.Nav_number}>04. </span>
-						<span className={styles.Nav_link}>C</span>ontact
+						<span className="Nav_number">04.&ensp;</span>
+						<span className="Nav_link">C</span>ontact
 					</Link>
 					<a
-						className={styles.resume_button}
+						className="resume_button"
 						href={resume}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<span className={styles.Nav_link}>R</span>esume
+						<span className="resume_text">Resume</span>
 					</a>
 				</nav>
 			)}
-			<button onClick={toggleNav} className={styles.Burger}>
-				🍔
-			</button>
 		</header>
 	);
 }

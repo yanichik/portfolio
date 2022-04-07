@@ -1,0 +1,16 @@
+@import "fonts";
+
+.about {
+	margin-top: 25%;
+	position: relative;
+	justify-self: center;
+}
+
+.about_me {
+	text-transform: uppercase;
+}
+
+.about_me_parag {
+	font-family: $paragraph-font-family;
+	line-height: 140%;
+}

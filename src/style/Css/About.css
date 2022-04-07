@@ -1,0 +1,14 @@
+.about {
+  margin-top: 25%;
+  position: relative;
+  justify-self: center;
+}
+
+.about_me {
+  text-transform: uppercase;
+}
+
+.about_me_parag {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text";
+  line-height: 140%;
+}

@@ -1,6 +1,9 @@
+@import "fonts";
+
 .intro_name {
 	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 	font-size: 0.8rem;
+	color: $number-color;
 	/* font-weight: bold; */
 }
 
@@ -11,18 +14,24 @@
 }
 
 .intro_parag {
-	font-family: Calibre, Inter, "San Francisco", "SF Pro Text";
+	font-family: $paragraph-font-family;
 	font-size: 1rem;
 	/* font-weight: bold; */
+	margin-bottom: -20px;
 }
 
 .github {
-	margin-top: 3%;
-	border: solid 1px black;
-	padding: 3px;
+	display: grid;
+	justify-content: left;
+	// margin-top: -15px;
+	// line-height: 100%;
+}
+.github a {
+	border: solid 1px $number-color;
+	padding: 5px;
 	border-radius: 3px;
+	color: $number-color;
 	text-decoration: none;
-	color: inherit;
 }
 
 p {

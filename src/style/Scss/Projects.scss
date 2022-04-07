@@ -1,0 +1,15 @@
+@import "fonts";
+
+.projects {
+	margin-top: 25%;
+	position: relative;
+	justify-self: center;
+}
+
+.projects_header {
+	text-transform: uppercase;
+}
+
+.projects_parag {
+	font-family: $paragraph-font-family;
+}

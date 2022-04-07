@@ -1,0 +1,11 @@
+.contact {
+  display: inherit;
+  flex-direction: column;
+  text-align: justify;
+  margin-top: 25%;
+  position: relative;
+}
+
+.contact a {
+  text-align: center;
+}

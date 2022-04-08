@@ -51,7 +51,9 @@ export default function Sidelinks(props) {
 					</a>
 				</div>
 			</div>
-			<div className="email"></div>
+			<div className="email">
+				<a href="mailto:brunshte@gmail.com">brunshte@gmail.com</a>
+			</div>
 		</div>
 	);
 }

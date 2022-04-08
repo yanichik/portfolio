@@ -16,7 +16,7 @@ const Intro = (props) => {
 				relationship with their kids - to make dads cool again!
 			</div>
 			<br />
-			<div className="github">
+			<div className="dad_app_github">
 				<a
 					target="_blank"
 					rel="noopener noreferrer"

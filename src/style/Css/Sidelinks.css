@@ -16,6 +16,33 @@
   background-color: black;
 }
 
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 72%;
+  left: 85%;
+}
+
+.email a {
+  transform: rotate(90deg);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 90%;
+  font-weight: lighter;
+}
+
+.email::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 142px;
+  margin: 0px auto;
+  margin-top: 105px;
+  background-color: black;
+}
+
 ::before,
 ::after {
   box-sizing: inherit;

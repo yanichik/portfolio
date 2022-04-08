@@ -1,0 +1,53 @@
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 75%;
+  left: 5%;
+}
+
+.socials::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 140px;
+  margin: 0px auto;
+  background-color: black;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+.github {
+  margin-bottom: 20px;
+}
+
+.github svg {
+  color: rgba(255, 255, 255, 0.7);
+  fill: none;
+  width: 20px;
+  margin-bottom: 0;
+  fill: none;
+  vertical-align: middle;
+}
+
+.github a {
+  border: none;
+  padding: 0;
+}
+
+.linkedin {
+  margin-bottom: 30px;
+}
+
+.linkedin svg {
+  width: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  fill: none;
+  margin-bottom: 0;
+  fill: none;
+  vertical-align: middle;
+}

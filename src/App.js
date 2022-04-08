@@ -1,6 +1,7 @@
 import { useEffect, useState, Fragment } from "react";
 // import { Fragment } from "react";
 import Header from "./components/Layout/Header";
+import Sidelinks from "./components/Layout/Sidelinks";
 import Intro from "./components/Pages/Intro";
 import About from "./components/Pages/About";
 import Projects from "./components/Pages/Projects";
@@ -22,13 +23,13 @@ function App() {
 			setAnimateLogoRemove(false);
 		}, 3000);
 	}, []);
-	// console.log(animateHeader);
 	return (
 		<Fragment>
 			{animateLogo && <Logo animateLogoRemove={animateLogoRemove} />}
 			{!animateLogo && (
 				<div className="layout">
 					<Header />
+					<Sidelinks />
 					<section className="content">
 						<Intro classes="anchor" id="intro" />
 						<About classes="anchor" id="about" />

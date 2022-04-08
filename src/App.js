@@ -17,11 +17,13 @@ function App() {
 	useEffect(() => {
 		setTimeout(() => {
 			setAnimateLogoRemove(true);
-		}, 2000);
+		// }, 2000);
+		}, 0);
 		setTimeout(() => {
 			setAnimateLogo(false);
 			setAnimateLogoRemove(false);
-		}, 3000);
+		// }, 3000);
+		}, 0);
 	}, []);
 	return (
 		<Fragment>

@@ -1,4 +1,30 @@
-.skills{
-  margin-top: 25%;
-  position: relative;
-  }
+.skills {
+	margin-top: 25%;
+	position: relative;
+}
+
+.svg {
+	// display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.skills_parag {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// align-items: center;
+}
+
+.languages {
+	display: inline-flex;
+	line-height: 50px;
+}
+
+.language_icons {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-evenly;
+}

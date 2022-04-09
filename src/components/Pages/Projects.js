@@ -1,17 +1,15 @@
-import { useState } from "react";
-const projectsList = {
-	dadApp: "dadApp",
-	salonMVP: "salonMVP",
-	nextBeeClone: "nextBeeClone",
-	weatherApp: "weatherApp",
-	yelpCamp: "yelpCamp",
-	authApp: "authApp",
-};
+// import { useState } from "react";
+// const projectsList = {
+// 	dadApp: "dadApp",
+// 	salonMVP: "salonMVP",
+// 	nextBeeClone: "nextBeeClone",
+// 	weatherApp: "weatherApp",
+// 	yelpCamp: "yelpCamp",
+// 	authApp: "authApp",
+// };
 const Projects = (props) => {
-	const [displayProject, setDisplayProject] = useState(projectsList.salonMVP);
-	const salonMvpDiv = <div>
-		
-	</div>
+	// const [displayProject, setDisplayProject] = useState(projectsList.salonMVP);
+	// const salonMvpDiv = <div></div>;
 	return (
 		<div className="projects" id={props.id}>
 			<div className="projects_header">

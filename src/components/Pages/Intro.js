@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import styles from "./Intro.module.css";
 const Intro = (props) => {
 	return (

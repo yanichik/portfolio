@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
+// import { Routes, Route } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import resume from "../../assets/resume.pdf";
 // import styles from "./Header.module.css";
@@ -53,25 +55,31 @@ export default function Header(props) {
 
 	return (
 		<header className={navShadowVisible ? "Header Header_scrolled" : "Header"}>
-			<img src={logo} className="header_logo animate__animated animate__lightSpeedInLeft" alt="Header Logo" />
+			<a href="/">
+				<img
+					src={logo}
+					className="header_logo animate__animated animate__lightSpeedInLeft"
+					alt="Header Logo"
+				/>
+			</a>
 			{!isSmallScreen && (
 				<nav className="Nav animate__animated animate__lightSpeedInLeft">
-					<Link smooth to="#about" scroll={(el) => scrollWithOffset(el)}>
+					<HashLink smooth to="#about" scroll={(el) => scrollWithOffset(el)}>
 						<span className="Nav_number">01.&ensp;</span>
 						<span className="Nav_link">A</span>bout
-					</Link>
-					<Link smooth to="#projects" scroll={(el) => scrollWithOffset(el)}>
+					</HashLink>
+					<HashLink smooth to="#projects" scroll={(el) => scrollWithOffset(el)}>
 						<span className="Nav_number">02.&ensp;</span>
 						<span className="Nav_link">P</span>rojects
-					</Link>
-					<Link smooth to="#skills" scroll={(el) => scrollWithOffset(el)}>
+					</HashLink>
+					<HashLink smooth to="#skills" scroll={(el) => scrollWithOffset(el)}>
 						<span className="Nav_number">03.&ensp;</span>
 						<span className="Nav_link">S</span>kills
-					</Link>
-					<Link smooth to="#contact" scroll={(el) => scrollWithOffset(el)}>
+					</HashLink>
+					<HashLink smooth to="#contact" scroll={(el) => scrollWithOffset(el)}>
 						<span className="Nav_number">04.&ensp;</span>
 						<span className="Nav_link">C</span>ontact
-					</Link>
+					</HashLink>
 					<a
 						className="resume_button"
 						href={resume}

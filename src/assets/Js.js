@@ -2,7 +2,7 @@ export default function Js(props) {
 	return (
 		<svg
 			className="svg"
-			enable-background="new 0 0 504 504"
+			enableBackground="new 0 0 504 504"
 			id="Layer_1"
 			version="1.1"
 			viewBox="0 0 504 504"

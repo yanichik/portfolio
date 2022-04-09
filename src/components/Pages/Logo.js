@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
+// import React, { useEffect, useState } from "react";
+// import { HashLink as Link } from "react-router-hash-link";
 import logo from "../../assets/logo.svg";
 
 export default function Logo(props) {

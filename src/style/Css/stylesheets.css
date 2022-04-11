@@ -1,12 +1,23 @@
 @import "~animate.css/source/animate.css";
 .about {
-  margin-top: 25%;
+  margin-top: 50%;
   position: relative;
   justify-self: center;
 }
 
 .about_me {
   text-transform: uppercase;
+}
+
+.about_me::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .about_me_parag {
@@ -41,14 +52,14 @@
 }
 
 .skills {
-  margin-top: 25%;
+  margin-top: 50%;
   position: relative;
   width: 100%;
 }
 
 .svg {
   width: auto;
-  height: 50px;
+  height: 40px;
   margin: 0px;
   padding: 0px;
 }
@@ -57,12 +68,14 @@
   height: 30px;
   width: auto;
   align-self: center;
+  margin-bottom: 10px;
 }
 
 .svg.mongoDb {
   height: 30px;
   width: auto;
   align-self: center;
+  margin-bottom: 10px;
 }
 
 .svg.Npm {
@@ -75,8 +88,9 @@
   display: inline-flex;
   flex-direction: column;
   color: black;
-  height: 40px;
+  height: 30px;
   width: auto;
+  margin-top: -5px;
 }
 
 .ejs img {
@@ -85,7 +99,7 @@
 }
 
 .ejs_title {
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 5px;
   margin: -10px;
 }
@@ -109,7 +123,7 @@
 }
 
 .projects {
-  margin-top: 25%;
+  margin-top: 50%;
   position: relative;
   justify-self: center;
 }
@@ -163,7 +177,7 @@ p {
   display: inherit;
   flex-direction: column;
   text-align: justify;
-  margin-top: 25%;
+  margin-top: 50%;
   position: relative;
 }
 
@@ -171,14 +185,38 @@ p {
   text-align: center;
 }
 
+.contact_button {
+  font-size: 120%;
+  margin: 0;
+  outline: #c7a003 solid 1px;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 6px 15px;
+}
+
+.contact_text {
+  color: #c7a003;
+}
+
 .about {
-  margin-top: 25%;
+  margin-top: 50%;
   position: relative;
   justify-self: center;
 }
 
 .about_me {
   text-transform: uppercase;
+}
+
+.about_me::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .about_me_parag {

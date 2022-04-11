@@ -2,9 +2,21 @@
 	display: inherit;
 	flex-direction: column;
 	text-align: justify;
-	margin-top: 25%;
+	margin-top: 50%;
 	position: relative;
 }
 .contact a {
 	text-align: center;
+}
+
+.contact_button {
+	font-size: 120%;
+	margin: 0;
+	outline: $number-color solid 1px;
+	border-radius: 4px;
+	text-decoration: none;
+	padding: 6px 15px;
+}
+.contact_text {
+	color: $number-color;
 }
